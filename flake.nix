@@ -1,34 +1,26 @@
 {
-    description = "home-manager";
-
     inputs = {
-        nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+        nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
         home-manager.url = "github:nix-community/home-manager/master";
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
-        };
-
-    outputs = { self, nixpkgs, home-manager, ... }:
-    let 
-        lib = nixpkgs.lib;
-        system = "x86_64-linux";
-        pkgs = nixpkgs.legacyPackages.${system};
-    in {
-        nixosConfigurations = {
-            nixos-home-personal = lib.nixosSystem {
-                inherit system;
-                modules = [
-                    ./configuration.nix
-                ];
-            };
-        };
-
-        homeConfigurations = {
-            randomasian = home-manager.lib.homeManagerConfiguration {
-                inherit pkgs;
-                modules = [
-                    ./home.nix
-                ];
-            };
-        };
+        flake-parts.url = "github:hercules-ci/flake-parts";
     };
+
+    outputs = inputs@{ flake-parts, ... }:
+        flake-parts.lib.mkFlake { inherit inputs; } {
+            systems = [
+                "x86_64-linux"
+            ];
+
+            _module.args = {
+                inherit (inputs) home-manager;
+                inherit (inputs) nixpkgs;
+            };
+
+            imports = [
+                ./modules/flakes/nixos.nix
+                ./modules/flakes/home-manager.nix
+            ];
+        };
+
 }
