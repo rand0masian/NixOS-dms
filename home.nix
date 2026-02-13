@@ -1,20 +1,42 @@
-{ config, pkgs, ... }:
+{ config, inputs, pkgs, ... }:
 
 {
+  imports = [
+    inputs.spicetify-nix.homeManagerModules.default
+  ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "randomasian";
   home.homeDirectory = "/home/randomasian";
 
-  # git.
-  programs.git = {
+  # Programs:
+   # git.
+   programs.git = {
     enable = true;
     userName = "randomasian";
     userEmail = "alfieroskell@outlook.com";
     extraConfig = {
       init.defaultBranch = "main";
     };
-  };
+   };
+
+  # spicetify.
+  programs.spicetify =
+  let 
+    spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+  in
+    {
+      enable = true;
+      enabledExtensions = with spicePkgs.extensions; [
+        adblock
+        hidePodcasts
+      ];
+      enabledCustomApps = with spicePkgs.apps; [
+        ncsVisualizer
+      ];
+      theme = spicePkgs.themes.retroBlur;
+    };
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -49,6 +71,8 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
+    "/home/randomasian/.config/hypr/".source = ./hypr;
+    "/home/randomasian/.config/DankMaterialShell/".source = ./DankMaterialShell;
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.

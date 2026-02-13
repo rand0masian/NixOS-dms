@@ -3,6 +3,7 @@
         nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
         home-manager.url = "github:nix-community/home-manager/master";
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
+        spicetify-nix.url = "github:Gerg-L/spicetify-nix";
         flake-parts.url = "github:hercules-ci/flake-parts";
     };
 
@@ -15,6 +16,7 @@
             _module.args = {
                 inherit (inputs) home-manager;
                 inherit (inputs) nixpkgs;
+                inherit (inputs) spicetify-nix;
             };
 
             imports = [
