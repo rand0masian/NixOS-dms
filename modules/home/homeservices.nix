@@ -11,6 +11,14 @@
         enable = true;
      };
 
+      # Flatpak Remotes.
+      remotes = [
+         {
+            name = "flathub";
+            location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
+         }
+      ];
+
       # Flatpak Packages.
      services.flatpak.packages = [
         "com.usebottles.bottles"
