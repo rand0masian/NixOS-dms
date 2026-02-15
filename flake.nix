@@ -9,6 +9,7 @@
             flake = false;
         };
 
+        nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
         flake-parts.url = "github:hercules-ci/flake-parts";
     };
 
@@ -23,6 +24,7 @@
                 inherit (inputs) nixpkgs;
                 inherit (inputs) spicetify-nix;
                 inherit (inputs) wallpapers;
+                inherit (inputs) nix-flatpak;
             };
 
             imports = [

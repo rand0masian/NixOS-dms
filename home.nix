@@ -3,12 +3,20 @@
 {
   imports = [
     inputs.spicetify-nix.homeManagerModules.default
+    inputs.nix-flatpak.homeManagerModules.nix-flatpak
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "randomasian";
   home.homeDirectory = "/home/randomasian";
+
+  # Flatpak.
+  services.flatpak.packages = [
+    "com.usebottles.bottles"
+    "com.github.tchx84.Flatseal"
+    "org.vinegarhq.Sober"
+  ];
 
   # Programs:
    # git.
