@@ -27,4 +27,9 @@
      services.xserver.videoDrivers = [
         "nvidia"
      ];
+
+     # Flatpak.
+     services.flatpak = {
+      enable = true;
+     };
 }

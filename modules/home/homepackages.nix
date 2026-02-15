@@ -6,6 +6,7 @@
         pkgs.vesktop
         pkgs.protonvpn-gui
         pkgs.protonup-qt
+        pkgs.flatpak
 
         # Heroic.
         (pkgs.heroic.override {

@@ -6,20 +6,15 @@
     ];
 
     # Home Services:
-     # Flatpak.
-     services.flatpak = {
-        enable = true;
-     };
-
-      # Flatpak Remotes.
-      services.flatpak.remotes = [
+     # Flatpak Remotes.
+     services.flatpak.remotes = [
          {
             name = "flathub";
             location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
          }
       ];
 
-      # Flatpak Packages.
+     # Flatpak Packages.
      services.flatpak.packages = [
         "com.usebottles.bottles"
         "com.github.tchx84.Flatseal"
