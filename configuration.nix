@@ -100,6 +100,14 @@
     pkgs.mint-cursor-themes
     pkgs.git
     pkgs.protonup-qt
+    pkgs.heroic
+
+    # heroic override
+    (heroic.override {
+      extraPkgs = pkgs': with pkgs'; [
+        gamemode
+      ];
+    })
   ];
 
   # Shells.
