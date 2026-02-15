@@ -73,6 +73,7 @@
   home.file = {
     "/home/randomasian/.config/hypr/".source = ./hypr;
     "/home/randomasian/.config/DankMaterialShell/".source = ./DankMaterialShell;
+    "./wallpapers".source = inputs.wallpapers;
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.

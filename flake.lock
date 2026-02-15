@@ -91,7 +91,8 @@
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "spicetify-nix": "spicetify-nix"
+        "spicetify-nix": "spicetify-nix",
+        "wallpapers": "wallpapers"
       }
     },
     "spicetify-nix": {
@@ -125,6 +126,22 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "wallpapers": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1770386107,
+        "narHash": "sha256-12YrRr/hUqPHRLoF4g4vKRtY9yaxRXo836huqnOw+qw=",
+        "owner": "krishna4a6av",
+        "repo": "Wallpapers",
+        "rev": "76c6e11596299d0e5a88e7128bb039783bec14e5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "krishna4a6av",
+        "repo": "Wallpapers",
         "type": "github"
       }
     }

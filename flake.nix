@@ -4,6 +4,11 @@
         home-manager.url = "github:nix-community/home-manager/master";
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
         spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+        wallpapers = {
+            url = "github:krishna4a6av/Wallpapers";
+            flake = false;
+        };
+
         flake-parts.url = "github:hercules-ci/flake-parts";
     };
 
@@ -17,6 +22,7 @@
                 inherit (inputs) home-manager;
                 inherit (inputs) nixpkgs;
                 inherit (inputs) spicetify-nix;
+                inherit (inputs) wallpapers;
             };
 
             imports = [

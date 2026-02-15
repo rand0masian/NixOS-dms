@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
       ./modules/nix/programs.nix
       ./modules/nix/services.nix
+      ./modules/nix/packages.nix
     ];
 
   # Bootloader.
@@ -82,33 +83,6 @@
     open = true;
     nvidiaSettings = true;
    };
-
-  # System Packages.
-  environment.systemPackages = with pkgs; [
-    pkgs.xwayland-satellite
-    pkgs.sddm-astronaut
-    pkgs.vscode
-    kdePackages.polkit-kde-agent-1
-    pkgs.firefox
-    kdePackages.dolphin
-    pkgs.kitty
-    pkgs.fastfetch
-    pkgs.fuzzel
-    pkgs.vesktop
-    pkgs.protonvpn-gui
-    pkgs.spotify
-    pkgs.mint-cursor-themes
-    pkgs.git
-    pkgs.protonup-qt
-    pkgs.heroic
-
-    # heroic override
-    (heroic.override {
-      extraPkgs = pkgs': with pkgs'; [
-        gamemode
-      ];
-    })
-  ];
 
   # Shells.
   environment.shells = with pkgs; [
