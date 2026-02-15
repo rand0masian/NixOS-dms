@@ -29,7 +29,7 @@
       enable = true;
      };
 
-     # GameMode.
+     # GameMode
      programs.gamemode = {
       enable = true;
      };
