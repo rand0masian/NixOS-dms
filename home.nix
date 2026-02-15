@@ -21,22 +21,22 @@
     };
    };
 
-  # spicetify.
-  programs.spicetify =
-  let 
+   # spicetify.
+   programs.spicetify =
+   let 
     spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
-  in
-    {
-      enable = true;
-      enabledExtensions = with spicePkgs.extensions; [
-        adblock
-        hidePodcasts
-      ];
-      enabledCustomApps = with spicePkgs.apps; [
-        ncsVisualizer
-      ];
-      theme = spicePkgs.themes.retroBlur;
-    };
+    in
+      {
+        enable = true;
+        enabledExtensions = with spicePkgs.extensions; [
+          adblock
+          hidePodcasts
+        ];
+        enabledCustomApps = with spicePkgs.apps; [
+          ncsVisualizer
+        ];
+        theme = spicePkgs.themes.retroBlur;
+      };
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release

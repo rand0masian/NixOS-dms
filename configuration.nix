@@ -99,6 +99,7 @@
     pkgs.spotify
     pkgs.mint-cursor-themes
     pkgs.git
+    pkgs.protonup-qt
   ];
 
   # Shells.
