@@ -32,6 +32,7 @@
             ];
             theme = spicePkgs.themes.retroBlur;
         };
+
      # OBS.
      programs.obs-studio = {
         enable = true;
@@ -42,5 +43,5 @@
             obs-gstreamer
             obs-vkcapture
         ];
-     };  
+     }; 
 }
