@@ -35,7 +35,5 @@
      # Flatpak.
      services.flatpak = {
       enable = true;
-      update.onActivation = false;
-      uninstallUnmanaged = true;
      };
 }

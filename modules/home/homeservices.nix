@@ -8,6 +8,14 @@
     # Home Services:
      # Flatpak.
      services.flatpak = {
+        enable = true;
+        update.onActivation = true;
+        uninstallUnmanaged = true;
+        uninstallUnused = true;
+        update.auto = {
+            enable = true;
+            onCalendar = "daily";
+        };
         remotes = [
             {
                 name = "flathub";
@@ -19,7 +27,17 @@
             "com.usebottles.bottles"
             "com.github.tchx84.Flatseal"
             "org.vinegarhq.Sober"
-            "org.gnome.Showtime"
+            "org.gnome.Totem"
         ];
      };
+     
+      # systemd.
+      systemd.user.services.flatpak-managed-install = {
+        unitConfig = {
+            StartLimitInterval = 0;
+        };
+        serviceConfig = {
+            TimeoutStartSec = "5m";
+        };
+      };
 }
