@@ -72,6 +72,7 @@
    # OpenGL.
    hardware.graphics = {
     enable = true;
+    enable32Bit = true;
    };
 
    # Nvidia
@@ -121,6 +122,14 @@
 
   # Session Variables.
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
+  # xdg portal.
+  xdg.portal = {
+    enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+    ];
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

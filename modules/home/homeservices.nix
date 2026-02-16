@@ -27,7 +27,8 @@
             "com.usebottles.bottles"
             "com.github.tchx84.Flatseal"
             "org.vinegarhq.Sober"
-            "org.gnome.Totem"
+            "io.github.celluloid_player.Celluloid"
+            "com.interversehq.qView"
         ];
      };
      
