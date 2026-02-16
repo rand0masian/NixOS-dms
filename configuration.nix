@@ -79,10 +79,23 @@
     modesetting = {
       enable = true;
     };
-
+    powerManagement = {
+      enable = false;
+    };
     open = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
     nvidiaSettings = true;
    };
+
+   # kernelParams
+   boot.kernelParams = [
+    "nvidia-drm.modeset=1"
+    "nvidia_drm.fbdev=1"
+    "nvidia.NVreg_RegistryDwords=PowerMizerEnable=0x1"
+    "PerfLevelSrc=0x2222"
+    "PowerMizerDefault=0x1"
+    "PowerMizerDefaultAC=0x1"
+   ];
 
   # Shells.
   environment.shells = with pkgs; [
@@ -106,16 +119,8 @@
     "/mnt"
   ];
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  # Session Variables.
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

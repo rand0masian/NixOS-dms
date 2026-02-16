@@ -1,6 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
+   imports = [
+      inputs.nix-flatpak.nixosModules.nix-flatpak
+   ];
+
     # Services:
      # sddm.
      services.displayManager.sddm = {
@@ -31,5 +35,7 @@
      # Flatpak.
      services.flatpak = {
       enable = true;
+      update.onActivation = false;
+      uninstallUnmanaged = true;
      };
 }
