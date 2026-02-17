@@ -29,6 +29,7 @@
             "org.vinegarhq.Sober"
             "io.github.celluloid_player.Celluloid"
             "com.interversehq.qView"
+            "org.gnome.gitlab.YaLTeR.VideoTrimmer"
         ];
      };
      
