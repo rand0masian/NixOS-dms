@@ -14,6 +14,7 @@
     pkgs.fuzzel
     pkgs.mint-cursor-themes
     pkgs.git
+    pkgs.unzip
 
     # Wallpapers.
     (pkgs.stdenv.mkDerivation {
