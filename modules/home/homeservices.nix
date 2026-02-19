@@ -24,7 +24,6 @@
         ];
         packages = [
             "runtime/org.gnome.Platform/x86_64/49"
-            "com.usebottles.bottles"
             "com.github.tchx84.Flatseal"
             "org.vinegarhq.Sober"
             "io.github.celluloid_player.Celluloid"

@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ...}:
+{ config, pkgs, ...}:
 
 {
     # Home Packages:
@@ -7,6 +7,7 @@
         pkgs.protonvpn-gui
         pkgs.protonup-qt
         pkgs.flatpak
+        pkgs.lutris
         
         # Heroic.
         (pkgs.heroic.override {
