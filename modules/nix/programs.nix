@@ -1,6 +1,11 @@
-{ config, ... }:
+{ config, inputs, ... }:
 
 {
+   imports = [
+      inputs.dms.nixosModules.dank-material-shell
+      inputs.dms.nixosModules.greeter
+   ];
+
     # Programs:
      # Hyprland Wayland Compositer.
      programs.hyprland = {
@@ -8,8 +13,22 @@
      };
 
      # DankMaterialShell.
-     programs.dms-shell = {
-        enable = true;
+     programs.dank-material-shell = {
+      enable = true;
+      greeter = {
+         enable = true;
+         compositor = {
+            name = "hyprland";
+         };
+         configHome = "/home/randomasian";
+         configFiles = [
+            "/home/randomasian/.configuration/DankMaterialShell/settings.json"
+         ];
+         logs = {
+            save = true;
+            path = "/tmp/dms-greeter.log";
+         };
+      };
      };
 
      # zsh.

@@ -1,14 +1,10 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, ... }:
 
 {
-   imports = [
-      inputs.nix-flatpak.nixosModules.nix-flatpak
-   ];
-
     # Services:
      # sddm.
      services.displayManager.sddm = {
-        enable = true;
+        enable = false;
         package = pkgs.kdePackages.sddm;
         theme = "sddm-astronaut-theme";
         extraPackages = with pkgs; [
