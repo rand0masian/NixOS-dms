@@ -8,6 +8,7 @@
         pkgs.protonup-qt
         pkgs.flatpak
         pkgs.lutris
+        pkgs.protontricks
         
         # Heroic.
         (pkgs.heroic.override {
