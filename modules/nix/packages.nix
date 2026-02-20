@@ -15,6 +15,8 @@
     pkgs.mint-cursor-themes
     pkgs.git
     pkgs.unzip
+    pkgs.wine-wayland
+    pkgs.winetricks
 
     # Wallpapers.
     (pkgs.stdenv.mkDerivation {
