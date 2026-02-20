@@ -18,7 +18,6 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
-        wayland-vpets.url = "github:furudbat/wayland-vpets";
         flake-parts.url = "github:hercules-ci/flake-parts";
     };
 
@@ -35,7 +34,6 @@
                 inherit (inputs) wallpapers;
                 inherit (inputs) nix-flatpak;
                 inherit (inputs) dms;
-                inherit (inputs) wayland-vpets;
             };
 
             imports = [
