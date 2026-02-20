@@ -9,6 +9,8 @@
         pkgs.flatpak
         pkgs.lutris
         pkgs.protontricks
+        pkgs.whatsapp-electron
+        pkgs.telegram-desktop
         
         # Heroic.
         (pkgs.heroic.override {
