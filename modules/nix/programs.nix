@@ -4,6 +4,7 @@
    imports = [
       inputs.dms.nixosModules.dank-material-shell
       inputs.dms.nixosModules.greeter
+      inputs.wayland-vpets.nixosModules.default
    ];
 
     # Programs:
@@ -51,5 +52,11 @@
      # GameMode
      programs.gamemode = {
       enable = true;
+     };
+
+     # wayland-vpets
+     programs.wayland-bongocat = {
+      enable = true;
+      autostart = true;
      };
 }

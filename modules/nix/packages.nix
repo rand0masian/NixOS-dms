@@ -1,6 +1,7 @@
 { config, pkgs, inputs, ... }:
 
 {
+
   # System Packages:
   environment.systemPackages = with pkgs; [
     pkgs.xwayland-satellite
@@ -17,7 +18,6 @@
     pkgs.unzip
     pkgs.wine-wayland
     pkgs.winetricks
-    pkgs.cmake
 
     # Wallpapers.
     (pkgs.stdenv.mkDerivation {
