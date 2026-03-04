@@ -29,7 +29,7 @@
             "io.github.celluloid_player.Celluloid"
             "com.interversehq.qView"
             "org.gnome.gitlab.YaLTeR.VideoTrimmer"
-            "net.codelogistics.clicker"
+            "com.usebottles.bottles"
         ];
      };
      

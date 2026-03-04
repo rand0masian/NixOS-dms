@@ -18,6 +18,7 @@
     pkgs.wine-wayland
     pkgs.winetricks
     pkgs.cmake
+    pkgs.rar
 
     # Wallpapers.
     (pkgs.stdenv.mkDerivation {
