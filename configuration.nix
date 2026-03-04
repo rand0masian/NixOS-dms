@@ -135,6 +135,12 @@
     ];
   };
 
+  # Settings.
+  nix.settings = {
+    connect-timeout = 60;
+    stalled-download-timeout = 60;
+  };
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
