@@ -19,6 +19,7 @@
     pkgs.winetricks
     pkgs.cmake
     pkgs.rar
+    pkgs.p7zip
 
     # Wallpapers.
     (pkgs.stdenv.mkDerivation {
