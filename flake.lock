@@ -1,22 +1,5 @@
 {
   "nodes": {
-    "SillyTavern": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1772552773,
-        "narHash": "sha256-It7RTSN1myQdOq90sG4SjHo+dYpVvI0Jm8jHkQWI99Y=",
-        "owner": "SillyTavern",
-        "repo": "SillyTavern",
-        "rev": "e41bcf0cced493ecaec3a33a414eb7a3c8411d25",
-        "type": "github"
-      },
-      "original": {
-        "owner": "SillyTavern",
-        "ref": "release",
-        "repo": "SillyTavern",
-        "type": "github"
-      }
-    },
     "dms": {
       "inputs": {
         "nixpkgs": [
@@ -162,7 +145,6 @@
     },
     "root": {
       "inputs": {
-        "SillyTavern": "SillyTavern",
         "dms": "dms",
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
