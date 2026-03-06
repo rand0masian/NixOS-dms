@@ -1,8 +1,8 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, ... }:
 
 {
     # Home Packages:
-    home.packages = [
+    home.packages = with pkgs; [
         pkgs.vesktop
         pkgs.protonvpn-gui
         pkgs.protonup-qt
@@ -17,16 +17,6 @@
             extraPkgs = pkgs': with pkgs; [
                 gamemode
             ];
-        })
-
-        # SillyTavern.
-        (pkgs.stdenv.mkDerivation {
-            name = "SillyTavern";
-            src = inputs.SillyTavern;
-            installPhase = ''
-                mkdir -p $out/share/sillytavern
-                cp -r . $out/share/sillytavern/
-            '';
         })
     ];
 }
