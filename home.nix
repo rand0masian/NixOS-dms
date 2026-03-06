@@ -1,4 +1,4 @@
-{ config, inputs, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports = [
@@ -16,6 +16,7 @@
     "/home/randomasian/.config/hypr/".source = ./hypr;
     "/home/randomasian/.config/DankMaterialShell/".source = ./DankMaterialShell;
     "./wallpapers".source = inputs.wallpapers;
+    "./sillytavern".source = inputs.SillyTavern;
   };
 
   programs.home-manager.enable = true;

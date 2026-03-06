@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:
+{ config, pkgs, inputs, ... }:
 
 {
     # Home Packages:
@@ -17,6 +17,16 @@
             extraPkgs = pkgs': with pkgs; [
                 gamemode
             ];
+        })
+
+        # SillyTavern.
+        (pkgs.stdenv.mkDerivation {
+            name = "SillyTavern";
+            src = inputs.SillyTavern;
+            installPhase = ''
+                mkdir -p $out/share/sillytavern
+                cp -r . $out/share/sillytavern/
+            '';
         })
     ];
 }
