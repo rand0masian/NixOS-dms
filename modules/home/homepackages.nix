@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:
+{ config, pkgs, inputs, ... }:
 
 {
     # Home Packages:
@@ -11,6 +11,7 @@
         pkgs.protontricks
         pkgs.whatsapp-electron
         pkgs.telegram-desktop
+        inputs.sillytavern.packages.${pkgs.system}.default
         
         # Heroic.
         (pkgs.heroic.override {

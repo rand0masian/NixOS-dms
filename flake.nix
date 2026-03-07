@@ -19,6 +19,12 @@
         };
 
         wayland-vpets.url = "github:furudbat/wayland-vpets";
+
+        sillytavern = {
+            url = "github:SillyTavern/SillyTavern/release";
+            flake = false;
+        };
+
         flake-parts.url = "github:hercules-ci/flake-parts";
     };
 
@@ -36,11 +42,13 @@
                 inherit (inputs) nix-flatpak;
                 inherit (inputs) dms;
                 inherit (inputs) wayland-vpets;
+                inherit (inputs) sillytavern;
             };
 
             imports = [
                 ./modules/flakes/nixos.nix
                 ./modules/flakes/home-manager.nix
+                ./modules/flakes/sillytavern.nix
             ];
         };
 }
