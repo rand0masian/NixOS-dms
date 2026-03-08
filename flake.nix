@@ -18,6 +18,11 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
+        sillytavern = {
+            url = "github:SillyTavern/SillyTavern/release";
+            flake = false;
+        };
+
         flake-parts.url = "github:hercules-ci/flake-parts";
     };
 
@@ -34,11 +39,13 @@
                 inherit (inputs) wallpapers;
                 inherit (inputs) nix-flatpak;
                 inherit (inputs) dms;
+                inherit (inputs) sillytavern;
             };
 
             imports = [
                 ./modules/flakes/nixos.nix
                 ./modules/flakes/home-manager.nix
+                ./modules/flakes/sillytavern.nix
             ];
         };
 }
