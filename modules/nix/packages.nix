@@ -20,6 +20,7 @@
     pkgs.cmake
     pkgs.rar
     pkgs.p7zip
+    pkgs.pavucontrol
 
     # Wallpapers.
     (pkgs.stdenv.mkDerivation {
