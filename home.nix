@@ -18,5 +18,17 @@
     "./wallpapers".source = inputs.wallpapers;
   };
 
+  xdg.desktopEntries = {
+    sillytavern = {
+      name = "SillyTavern";
+      genericName = "LLM Frontend";
+      exec = "sillytavern";
+      icon = "sillytavern";
+      terminal = false;
+      categories = [ "Artificial Intelligence" ];
+      comment = "Interface for LLMs";
+    };
+  };
+
   programs.home-manager.enable = true;
 }
