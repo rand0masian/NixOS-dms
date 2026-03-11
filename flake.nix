@@ -18,6 +18,19 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
         
+        zen-browser = {
+            url = "github:0xc000022070/zen-browser-flake/main";
+            inputs = {
+                nixpkgs.follows = "nixpkgs";
+                home-manager.follows = "home-manager";
+            };
+        };
+
+        neo-zen = {
+            url = "github:JustVibingWhileCoding/Neo-Zen/main";
+            flake = false;
+        };
+
         flake-parts.url = "github:hercules-ci/flake-parts";
     };
 
@@ -34,6 +47,8 @@
                 inherit (inputs) wallpapers;
                 inherit (inputs) nix-flatpak;
                 inherit (inputs) dms;
+                inherit (inputs) zen-browser;
+                inherit (inputs) neo-zen;
             };
 
             imports = [

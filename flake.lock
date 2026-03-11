@@ -61,6 +61,23 @@
         "type": "github"
       }
     },
+    "neo-zen": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1768418123,
+        "narHash": "sha256-3kUWIjtFfGOSnXrzar/Q060dug1oTSe1iISi45dXAno=",
+        "owner": "JustVibingWhileCoding",
+        "repo": "Neo-Zen",
+        "rev": "0d75b0ffdca3741b26fe764d8fa5bf9e1946317d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "JustVibingWhileCoding",
+        "ref": "main",
+        "repo": "Neo-Zen",
+        "type": "github"
+      }
+    },
     "nix-flatpak": {
       "locked": {
         "lastModified": 1767983141,
@@ -148,10 +165,12 @@
         "dms": "dms",
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
+        "neo-zen": "neo-zen",
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
         "spicetify-nix": "spicetify-nix",
-        "wallpapers": "wallpapers"
+        "wallpapers": "wallpapers",
+        "zen-browser": "zen-browser"
       }
     },
     "spicetify-nix": {
@@ -201,6 +220,30 @@
       "original": {
         "owner": "krishna4a6av",
         "repo": "Wallpapers",
+        "type": "github"
+      }
+    },
+    "zen-browser": {
+      "inputs": {
+        "home-manager": [
+          "home-manager"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1773225617,
+        "narHash": "sha256-IT0n3jJgf4M7U0EuZJ2XJwXBmSJVVK3auqWDGeHGMzY=",
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
+        "rev": "413a22ab7acf848ed4e20c3f47ea96ccd4788518",
+        "type": "github"
+      },
+      "original": {
+        "owner": "0xc000022070",
+        "ref": "main",
+        "repo": "zen-browser-flake",
         "type": "github"
       }
     }

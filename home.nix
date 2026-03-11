@@ -16,6 +16,7 @@
     "/home/randomasian/.config/hypr/".source = ./hypr;
     "/home/randomasian/.config/DankMaterialShell/".source = ./DankMaterialShell;
     "./wallpapers".source = inputs.wallpapers;
+    "./neo-zen".source = inputs.neo-zen;
   };
 
   programs.home-manager.enable = true;

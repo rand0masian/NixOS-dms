@@ -30,7 +30,6 @@
             "com.interversehq.qView"
             "org.gnome.gitlab.YaLTeR.VideoTrimmer"
             "com.usebottles.bottles"
-            "app.zen_browser.zen"
         ];
      };
      

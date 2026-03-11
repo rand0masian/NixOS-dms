@@ -3,6 +3,7 @@
 {
     imports = [
         inputs.spicetify-nix.homeManagerModules.default
+        inputs.zen-browser.homeModules.twilight
     ];
 
     # Home Programs:
@@ -43,5 +44,20 @@
             obs-gstreamer
             obs-vkcapture
         ];
-     }; 
+     };
+
+     # zen-browser.
+     programs.zen-browser = {
+        enable = true;
+        profiles = {
+            default = {
+                userChrome = ''
+                    @import "${neo-zen-pkg}/share/neo-zen/userChrome.css";
+                '';
+                userContent = ''
+                    @import "${neo-zen-pkg}/share/neo-zen/userContent.css";
+                '';
+            };
+        };
+     };
 }
