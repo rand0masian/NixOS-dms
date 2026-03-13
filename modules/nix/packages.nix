@@ -21,15 +21,6 @@
     pkgs.rar
     pkgs.p7zip
     pkgs.pavucontrol
-
-    # Wallpapers.
-    (pkgs.stdenv.mkDerivation {
-      name = "Wallpapers";
-      src = inputs.wallpapers;
-      installPhase = ''
-        mkdir -p $out/share/wallpapers
-        cp -r . $out/share/wallpapers/
-      '';
-    }) 
+    pkgs.wallpapers
   ];
 }

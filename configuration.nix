@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
@@ -7,6 +7,8 @@
       ./modules/nix/programs.nix
       ./modules/nix/services.nix
       ./modules/nix/packages.nix
+      ./modules/nix/overlays.nix
+      inputs.home-manager.nixosModules.home-manager
     ];
 
   # Bootloader.
@@ -77,6 +79,11 @@
    hardware.graphics = {
     enable = true;
     enable32Bit = true;
+    extraPackages = with pkgs; [
+      mesa
+      libva-vdpau-driver
+      libvdpau-va-gl
+    ];
    };
 
    # Nvidia
@@ -139,6 +146,14 @@
   nix.settings = {
     connect-timeout = 60;
     stalled-download-timeout = 60;
+  };
+
+  # home-manager.
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    extraSpecialArgs = { inherit inputs; };
+    users.randomasian = import ./home.nix;
   };
 
   # Open ports in the firewall.

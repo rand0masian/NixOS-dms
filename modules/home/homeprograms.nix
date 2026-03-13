@@ -51,11 +51,36 @@
         enable = true;
         profiles = {
             default = {
+                settings = {
+                    "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+                    "gfx.webrender.all" = true;
+                    "layers.acceleration.force-enabled" = true;
+                    "widget.wayland.enable" = 1;
+                    "media.ffmpeg.vaapi.enabled" = true;
+                    "media.rdd-ffmpeg.enabled" = true;
+                    "widget.dmabuf.force-enabled" = true;
+                };
                 userChrome = ''
-                    @import "${neo-zen-pkg}/share/neo-zen/userChrome.css";
+                    @import "${pkgs.neo-zen}/share/neo-zen/userChrome.css";
+
+                    * { transition: none !important; }
+                    :root {
+                    --zen-blur-radius: 0px !important;
+                    --zen-element-transitions: 0s !important;
+                    }
+
+                    * {
+                       backdrop-filter: none !important;
+                       box-shadow: none !important;
+                    }
+
+                    #TabsToolbar, #nav-bar, #sidebar-box {
+                        background-color: var(--zen-colors-tertiary) !important;
+                        opacity: 1 !important;
+                        }
                 '';
                 userContent = ''
-                    @import "${neo-zen-pkg}/share/neo-zen/userContent.css";
+                    @import "${pkgs.neo-zen}/share/neo-zen/userContent.css";
                 '';
             };
         };

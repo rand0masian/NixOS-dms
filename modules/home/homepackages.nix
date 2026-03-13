@@ -11,6 +11,7 @@
         pkgs.protontricks
         pkgs.whatsapp-electron
         pkgs.telegram-desktop
+        pkgs.neo-zen
         
         # Heroic.
         (pkgs.heroic.override {
