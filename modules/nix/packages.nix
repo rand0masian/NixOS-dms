@@ -7,7 +7,6 @@
     pkgs.sddm-astronaut
     pkgs.vscode
     kdePackages.polkit-kde-agent-1
-    pkgs.firefox
     kdePackages.dolphin
     pkgs.kitty
     pkgs.fastfetch

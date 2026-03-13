@@ -11,6 +11,7 @@
         pkgs.protontricks
         pkgs.whatsapp-electron
         pkgs.telegram-desktop
+        inputs.zen-browser.packages.${pkgs.system}.default
         pkgs.neo-zen
         
         # Heroic.

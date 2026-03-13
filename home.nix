@@ -19,5 +19,9 @@
     "./neo-zen".source = inputs.neo-zen;
   };
 
+  home.sessionVariables = {
+    DEFAULT_BROWSER = "zen-twilight";
+  };
+
   programs.home-manager.enable = true;
 }
