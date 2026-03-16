@@ -10,14 +10,38 @@
   home.username = "randomasian";
   home.homeDirectory = "/home/randomasian";
 
-  home.stateVersion = "25.11";
-
   home.file = {
-    "/home/randomasian/.config/hypr/".source = ./hypr;
-    "/home/randomasian/.config/DankMaterialShell/".source = ./DankMaterialShell;
-    "./wallpapers".source = inputs.wallpapers;
-    "./neo-zen".source = inputs.neo-zen;
+    ".config/hypr" = {
+      source = ./hypr;
+      force = true;
+    };
+    ".config/DankMaterialShell" = {
+      source = ./DankMaterialShell;
+      force = true;
+    };
+    ".local/share/konsole" = {
+      source = ./konsole;
+      force = true;
+    };
+    ".config/konsolerc" = {
+      source = ./konsole/konsolerc;
+      force = true;
+    };
+    "$out/share/wallpapers" = {
+      source = ./wallpapers;
+      force = true;
+    };
+    "$out/share/neo-zen" = {
+      source = ./neo-zen;
+      force = true;
+    };
+    "$out/share/fastfetch-images" = {
+      source = ./fastfetch-images;
+      force = true;
+    };
   };
+
+  home.stateVersion = "25.11";
 
   home.sessionVariables = {
     DEFAULT_BROWSER = "zen-twilight";

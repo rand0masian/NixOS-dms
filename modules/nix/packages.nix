@@ -8,7 +8,7 @@
     pkgs.vscode
     kdePackages.polkit-kde-agent-1
     kdePackages.dolphin
-    pkgs.kitty
+    kdePackages.konsole
     pkgs.fastfetch
     pkgs.fuzzel
     pkgs.mint-cursor-themes
@@ -21,5 +21,6 @@
     pkgs.p7zip
     pkgs.pavucontrol
     pkgs.wallpapers
+    pkgs.firefox
   ];
 }

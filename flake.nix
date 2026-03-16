@@ -31,6 +31,16 @@
             flake = false;
         };
 
+        fastfetch-images-1 = {
+            url = "https://wallpapers.com/images/high/cute-anime-profile-pictures-hf5vd8c7ywpbvgvf.webp";
+            flake = false;
+        };
+
+        fastfetch-images-2 = {
+            url = "https://i.pinimg.com/736x/6f/90/ea/6f90eacec65e50b2b2f07178bedf8dd9.jpg";
+            flake = false;
+        };
+
         flake-parts.url = "github:hercules-ci/flake-parts";
     };
 
@@ -49,7 +59,9 @@
                 inherit (inputs) dms;
                 inherit (inputs) zen-browser;
                 inherit (inputs) neo-zen;
-            };
+                inherit (inputs) fastfetch-images-1;
+                inherit (inputs) fastfetch-images-2;
+            }; 
 
             imports = [
                 ./modules/flakes/nixos.nix

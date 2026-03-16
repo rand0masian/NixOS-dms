@@ -85,4 +85,24 @@
             };
         };
      };
+
+     # starship.
+     programs.starship = {
+        enable = true;
+        enableZshIntegration = true;
+        presets = [
+            "gruvbox-rainbow" 
+        ];
+     };
+
+     # fastfetch.
+     programs.fastfetch = {
+        enable = true;
+        settings = {
+            logo = {
+                source = "../../../fastfetch-images/fastfetch-images-1";
+                type = "iterm";
+            };
+        };
+     };
 }

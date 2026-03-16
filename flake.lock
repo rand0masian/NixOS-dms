@@ -22,6 +22,30 @@
         "type": "github"
       }
     },
+    "fastfetch-images-1": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-yDJ0PkZ+3UMrCAmKVer4Heu5k8RFH7QmHNX8CKLZsVw=",
+        "type": "file",
+        "url": "https://wallpapers.com/images/high/cute-anime-profile-pictures-hf5vd8c7ywpbvgvf.webp"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://wallpapers.com/images/high/cute-anime-profile-pictures-hf5vd8c7ywpbvgvf.webp"
+      }
+    },
+    "fastfetch-images-2": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-YCzZXtNVfTmT2tyGMZnYBtLkhnPKcpsM4PF0Zbz0Cms=",
+        "type": "file",
+        "url": "https://i.pinimg.com/736x/6f/90/ea/6f90eacec65e50b2b2f07178bedf8dd9.jpg"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://i.pinimg.com/736x/6f/90/ea/6f90eacec65e50b2b2f07178bedf8dd9.jpg"
+      }
+    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": "nixpkgs-lib"
@@ -96,11 +120,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1773282481,
-        "narHash": "sha256-b/GV2ysM8mKHhinse2wz+uP37epUrSE+sAKXy/xvBY4=",
+        "lastModified": 1773389992,
+        "narHash": "sha256-wvfdLLWJ2I9oEpDd9PfMA8osfIZicoQ5MT1jIwNs9Tk=",
         "owner": "Nixos",
         "repo": "nixpkgs",
-        "rev": "fe416aaedd397cacb33a610b33d60ff2b431b127",
+        "rev": "c06b4ae3d6599a672a6210b7021d699c351eebda",
         "type": "github"
       },
       "original": {
@@ -163,6 +187,8 @@
     "root": {
       "inputs": {
         "dms": "dms",
+        "fastfetch-images-1": "fastfetch-images-1",
+        "fastfetch-images-2": "fastfetch-images-2",
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "neo-zen": "neo-zen",
@@ -233,11 +259,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1773290887,
-        "narHash": "sha256-L1yMYmFffHfZNP+hKJGRBmrFKkn/VDhu7jEbVftBQuM=",
+        "lastModified": 1773496078,
+        "narHash": "sha256-AAMjxIVrWJnn3STN38WOTcB3wtneHB0Rh+yGuek6anI=",
         "owner": "0xc000022070",
         "repo": "zen-browser-flake",
-        "rev": "9346698c4562819f61b4e5097151ec0b17729fab",
+        "rev": "d296c2b39ec0b6528278d0bae2ead86d4749734c",
         "type": "github"
       },
       "original": {

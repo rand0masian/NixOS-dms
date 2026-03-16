@@ -41,6 +41,10 @@
         syntaxHighlighting = {
             enable = true;
         };
+        promptInit = ''
+         eval "$(starship init zsh)"
+         eval "$(fastfetch)"
+      '';
      };
 
      # Steam.
