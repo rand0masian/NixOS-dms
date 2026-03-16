@@ -12,12 +12,11 @@
 
   home.file = {
     ".config/hypr" = {
-      source = ./hypr;
-      recursive = true;
+      source = config.lib.file.mkOutOfStoreSymlink "/home/randomasian/.configuration/hypr";
       force = true;
     };
     ".config/DankMaterialShell" = {
-      source = ./DankMaterialShell;
+      source = config.lib.file.mkOutOfStoreSymlink "~/.DankMaterialShell";
       recursive = true;
       force = true;
     };

@@ -101,10 +101,28 @@
         settings = {
             logo = {
                 source = "${pkgs.fastfetch-images}/share/fastfetch-images/drowsy.webp";
-                type = "iterm";
+                type = "kitty";
                 width = 40;
                 height = 21;
             };
+            modules = [
+                "title"
+                "sepearator"
+                "os"
+                "host"
+                "kernel"
+                "uptime"
+                "packages"
+                "shell"
+                "display"
+                "wm"
+                "terminal"
+                "cpu"
+                "gpu"
+                "memory"
+                "break"
+                "colors"
+            ];
         };
      };
 }

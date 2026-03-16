@@ -1,6 +1,6 @@
 [General]
 Description=Dracula
-Opacity=1
+Opacity=0
 
 [Background]
 Color=40,42,54
