@@ -13,30 +13,26 @@
   home.file = {
     ".config/hypr" = {
       source = ./hypr;
+      recursive = true;
       force = true;
     };
     ".config/DankMaterialShell" = {
       source = ./DankMaterialShell;
+      recursive = true;
       force = true;
     };
     ".local/share/konsole" = {
       source = ./konsole;
+      recursive = true;
       force = true;
     };
     ".config/konsolerc" = {
       source = ./konsole/konsolerc;
       force = true;
     };
-    "$out/share/wallpapers" = {
-      source = ./wallpapers;
-      force = true;
-    };
-    "$out/share/neo-zen" = {
-      source = ./neo-zen;
-      force = true;
-    };
-    "$out/share/fastfetch-images" = {
-      source = ./fastfetch-images;
+    "./wallpapers" = {
+      source = "${pkgs.wallpapers}/share/wallpapers";
+      recursive = true;
       force = true;
     };
   };

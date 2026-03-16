@@ -91,7 +91,7 @@
         enable = true;
         enableZshIntegration = true;
         presets = [
-            "gruvbox-rainbow" 
+            "tokyo-night" 
         ];
      };
 
@@ -100,8 +100,10 @@
         enable = true;
         settings = {
             logo = {
-                source = "../../../fastfetch-images/fastfetch-images-1";
+                source = "${pkgs.fastfetch-images}/share/fastfetch-images/drowsy.webp";
                 type = "iterm";
+                width = 40;
+                height = 21;
             };
         };
      };

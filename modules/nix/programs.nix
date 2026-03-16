@@ -43,7 +43,7 @@
         };
         promptInit = ''
          eval "$(starship init zsh)"
-         eval "$(fastfetch)"
+         fastfetch
       '';
      };
 
