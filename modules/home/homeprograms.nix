@@ -85,4 +85,26 @@
             };
         };
      };
+
+     # starship.
+     programs.starship = {
+        enable = true;
+        enableZshIntegration = true;
+        presets = [
+            "tokyo-night" 
+        ];
+     };
+
+     # fastfetch.
+     programs.fastfetch = {
+        enable = true;
+        settings = {
+            logo = {
+                source = "${pkgs.fastfetch-images}/share/fastfetch-images/drowsy.webp";
+                type = "iterm";
+                width = 40;
+                height = 21;
+            };
+        };
+     };
 }

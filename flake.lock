@@ -22,6 +22,30 @@
         "type": "github"
       }
     },
+    "fastfetch-images-1": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-yDJ0PkZ+3UMrCAmKVer4Heu5k8RFH7QmHNX8CKLZsVw=",
+        "type": "file",
+        "url": "https://wallpapers.com/images/high/cute-anime-profile-pictures-hf5vd8c7ywpbvgvf.webp"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://wallpapers.com/images/high/cute-anime-profile-pictures-hf5vd8c7ywpbvgvf.webp"
+      }
+    },
+    "fastfetch-images-2": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-YCzZXtNVfTmT2tyGMZnYBtLkhnPKcpsM4PF0Zbz0Cms=",
+        "type": "file",
+        "url": "https://i.pinimg.com/736x/6f/90/ea/6f90eacec65e50b2b2f07178bedf8dd9.jpg"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://i.pinimg.com/736x/6f/90/ea/6f90eacec65e50b2b2f07178bedf8dd9.jpg"
+      }
+    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": "nixpkgs-lib"
@@ -163,6 +187,8 @@
     "root": {
       "inputs": {
         "dms": "dms",
+        "fastfetch-images-1": "fastfetch-images-1",
+        "fastfetch-images-2": "fastfetch-images-2",
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "neo-zen": "neo-zen",

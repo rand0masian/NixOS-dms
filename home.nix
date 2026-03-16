@@ -10,14 +10,34 @@
   home.username = "randomasian";
   home.homeDirectory = "/home/randomasian";
 
-  home.stateVersion = "25.11";
-
   home.file = {
-    "/home/randomasian/.config/hypr/".source = ./hypr;
-    "/home/randomasian/.config/DankMaterialShell/".source = ./DankMaterialShell;
-    "./wallpapers".source = inputs.wallpapers;
-    "./neo-zen".source = inputs.neo-zen;
+    ".config/hypr" = {
+      source = ./hypr;
+      recursive = true;
+      force = true;
+    };
+    ".config/DankMaterialShell" = {
+      source = ./DankMaterialShell;
+      recursive = true;
+      force = true;
+    };
+    ".local/share/konsole" = {
+      source = ./konsole;
+      recursive = true;
+      force = true;
+    };
+    ".config/konsolerc" = {
+      source = ./konsole/konsolerc;
+      force = true;
+    };
+    "./wallpapers" = {
+      source = "${pkgs.wallpapers}/share/wallpapers";
+      recursive = true;
+      force = true;
+    };
   };
+
+  home.stateVersion = "25.11";
 
   home.sessionVariables = {
     DEFAULT_BROWSER = "zen-twilight";

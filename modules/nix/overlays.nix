@@ -9,6 +9,9 @@
             neo-zen = self.callPackage ../pkgs/neo-zen.nix {
                 inherit inputs;
             };
+            fastfetch-images = self.callPackage ../pkgs/fastfetch-images.nix {
+                inherit inputs;
+            };
         })
     ];
 }

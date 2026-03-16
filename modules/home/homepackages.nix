@@ -13,6 +13,8 @@
         pkgs.telegram-desktop
         inputs.zen-browser.packages.${pkgs.system}.default
         pkgs.neo-zen
+        pkgs.starship
+        pkgs.fastfetch-images
         
         # Heroic.
         (pkgs.heroic.override {
