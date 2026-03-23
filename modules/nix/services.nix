@@ -32,4 +32,13 @@
      services.flatpak = {
       enable = true;
      };
+
+     # udev.
+     services.udev = {
+      extraRules = ''
+         KERNEL=="event*", GROUP="input", MODE="0660"
+         KERNEL=="uinput", GROUP="input", MODE="0660", OPTIONS+="static_node=uinput"
+         KERNEL=="tty[0-9]*", GROUP="tty", MODE="0660"
+      ''; 
+     };
 }

@@ -15,6 +15,8 @@
         pkgs.neo-zen
         pkgs.starship
         pkgs.fastfetch-images
+        pkgs.qbittorrent
+        pkgs.PINCE
         
         # Heroic.
         (pkgs.heroic.override {

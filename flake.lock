@@ -1,5 +1,17 @@
 {
   "nodes": {
+    "PINCE": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-EJfTzYVpa/jcwplqdo50faMEQCSjmIkCQCqDJYcM0Fk=",
+        "type": "file",
+        "url": "https://github.com/korcankaraokcu/PINCE/releases/download/v0.5/PINCE-x86_64.AppImage"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/korcankaraokcu/PINCE/releases/download/v0.5/PINCE-x86_64.AppImage"
+      }
+    },
     "dms": {
       "inputs": {
         "nixpkgs": [
@@ -186,6 +198,7 @@
     },
     "root": {
       "inputs": {
+        "PINCE": "PINCE",
         "dms": "dms",
         "fastfetch-images-1": "fastfetch-images-1",
         "fastfetch-images-2": "fastfetch-images-2",
