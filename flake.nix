@@ -1,6 +1,7 @@
 {
     inputs = {
         nixpkgs.url = "github:Nixos/nixpkgs/nixos-unstable";
+        
         home-manager = {
             url = "github:nix-community/home-manager/master";
             inputs.nixpkgs.follows = "nixpkgs";
@@ -41,6 +42,11 @@
             flake = false;
         };
 
+        PINCE = {
+            url = "https://github.com/korcankaraokcu/PINCE/releases/download/v0.5/PINCE-x86_64.AppImage";
+            flake = false;
+        };
+
         flake-parts.url = "github:hercules-ci/flake-parts";
     };
 
@@ -61,6 +67,7 @@
                 inherit (inputs) neo-zen;
                 inherit (inputs) fastfetch-images-1;
                 inherit (inputs) fastfetch-images-2;
+                inherit (inputs) PINCE;
             }; 
 
             imports = [

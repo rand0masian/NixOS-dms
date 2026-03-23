@@ -60,7 +60,7 @@
   users.users.randomasian = {
     isNormalUser = true;
     description = "randomasian";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "input" "tty" ];
     packages = with pkgs; [];
   };
 
@@ -108,6 +108,11 @@
     "PowerMizerDefault=0x1"
     "PowerMizerDefaultAC=0x1"
    ];
+
+  # kernelModules.
+  boot.kernelModules = [
+    "uninput"
+  ];
 
   # Shells.
   environment.shells = with pkgs; [

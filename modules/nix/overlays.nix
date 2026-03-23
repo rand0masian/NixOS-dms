@@ -12,6 +12,9 @@
             fastfetch-images = self.callPackage ../pkgs/fastfetch-images.nix {
                 inherit inputs;
             };
+            PINCE = self.callPackage ../pkgs/PINCE.nix {
+                inherit inputs;
+            };
         })
     ];
 }
