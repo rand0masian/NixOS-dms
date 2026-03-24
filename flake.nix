@@ -47,33 +47,12 @@
             flake = false;
         };
 
-        import-tree.url = "github:vic/import-tree";
         flake-parts.url = "github:hercules-ci/flake-parts";
+        import-tree.url = "github:vic/import-tree";
+        wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
     };
 
-    outputs = inputs@{ flake-parts, ... }:
-        flake-parts.lib.mkFlake { inherit inputs; } {
-            systems = [
-                "x86_64-linux"
-            ];
-
-            _module.args = {
-                inherit (inputs) nixpkgs;
-                inherit (inputs) home-manager;
-                inherit (inputs) spicetify-nix;
-                inherit (inputs) wallpapers;
-                inherit (inputs) nix-flatpak;
-                inherit (inputs) dms;
-                inherit (inputs) zen-browser;
-                inherit (inputs) neo-zen;
-                inherit (inputs) fastfetch-images-1;
-                inherit (inputs) fastfetch-images-2;
-                inherit (inputs) PINCE;
-            }; 
-
-            imports = [
-                ./modules/flakes/nixos.nix
-                ./modules/flakes/home-manager.nix
-            ];
-        };
+    outputs = inputs: inputs.flake-parts.lib.mkFlake
+        {inherit inputs;}
+        (inputs.import-tree ./hosts);
 }
