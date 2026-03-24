@@ -1,6 +1,6 @@
-# NixOS-dms
+# NixOS
 
-A NixOS configuration using the preconfigured DankMaterialShell dotfiles.
+A reproducible, alongside declarative NixOS configuration.
 
 ## Installation
 
